@@ -2,15 +2,15 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "worker": "nodemon src/worker.js",
-    "start:all": "concurrently \"npm run start\" \"npm run worker\"",
     "migrate:make": "node-pg-migrate create",
     "migrate:up": "node-pg-migrate up",
     "migrate:down": "node-pg-migrate down"
   },
   "dependencies": {
     "@hapi/hapi": "^21.4.3",
+    "bcrypt": "^6.0.0",
     "node-pg-migrate": "^8.0.3",
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.10",
+    "pg": "^8.16.3"
   }
 }
